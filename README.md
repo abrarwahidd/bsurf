@@ -131,7 +131,7 @@ Citra Input (JPG/PNG)
 ## 📁 Struktur Direktori
 
 ```
-beef-freshness-classification/
+bsurf/
 │
 ├── app.py                      # Aplikasi web Streamlit (Interface)
 ├── surf_final.ipynb            # Notebook pelatihan & evaluasi model

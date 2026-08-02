@@ -14,7 +14,7 @@ import io
 # 1. KONFIGURASI HALAMAN
 # ─────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="BIMA · Sistem Uji Daging Sapi",
+    page_title="Bsurf - Sistem Uji Daging Sapi",
     page_icon="🥩",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -371,7 +371,7 @@ with st.sidebar:
         <span style="font-size:2.4rem;">🥩</span>
         <h2 style="font-family:'Space Grotesk',sans-serif;
                    color:#e8eaed; margin:8px 0 2px 0; font-size:1.2rem;">
-            BIMA · SURF-BoVW
+            Bsurf -  SURF-BoVW
         </h2>
         <p style="color:#8b949e; font-size:0.78rem; margin:0;">
             Sistem Klasifikasi Kesegaran Daging Sapi
@@ -421,7 +421,7 @@ with st.sidebar:
     st.markdown(
         "<p style='font-size:0.75rem; color:#8b949e; text-align:center;'>"
         "Dikembangkan oleh <b style='color:#c9d1d9;'>Abrar Wahid</b><br>"
-        "Universitas Majalengka · 2024</p>",
+        "Universitas Majalengka · 2026</p>",
         unsafe_allow_html=True
     )
 
