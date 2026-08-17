@@ -1,12 +1,14 @@
-# Sistem Klasifikasi Kesegaran Daging Sapi
+# Tugas Akhir - Klasifikasi Kesegaran Daging Sapi
 
-> **Beef Inspection & Meat Analysis** — Sistem klasifikasi kesegaran daging sapi berbasis Computer Vision menggunakan Fusi Fitur SURF-BoVW & Momen Warna HSV dengan Support Vector Machine.
+> **Beef Inspection & Meat Analysis** — klasifikasi kesegaran daging sapi berbasis Computer Vision menggunakan Fusi Fitur SURF-BoVW & Momen Warna HSV dengan Support Vector Machine.
 
 **Penulis:** Abrar Wahid  
 **Institusi:** Program Studi Informatika, Fakultas Teknik, Universitas Majalengka  
 **Tahun:** 2026
 
 ---
+
+![Teks Alternatif](assets/image.png)
 
 ## Daftar Isi
 
@@ -48,8 +50,7 @@ Citra Input (JPG/PNG)
         ▼
 ┌─────────────────────────────┐
 │    Pra-pemrosesan Citra      │
-│  • Resize → 512×512 px      │
-│  • Gaussian Blur (7×7)      │
+│  • Resize → 512×512 px      │      │
 │  • Adaptive Background      │
 │    Removal (HSV Saturation  │
 │    + GrabCut + Morphology)  │
@@ -134,20 +135,23 @@ Citra Input (JPG/PNG)
 bsurf/
 │
 ├── app.py                      # Aplikasi web Streamlit (Interface)
-├── surf_final.ipynb            # Notebook pelatihan & evaluasi model
+├── train-surf.ipynb            # Notebook pelatihan & evaluasi model
 ├── README.md                   # Dokumentasi proyek ini
+├── requirements.txt            # Dependensi Python
 │
-├── models/                     # Model terlatih (dibuat setelah training)
+├── models/                     # Model terlatih
 │   ├── fusi_model.pkl          # Pipeline SVM + StandardScaler + FeatureWeighter
 │   └── kmeans_vocab.pkl        # Visual Vocabulary MiniBatch K-Means (K=100)
 │
-└── dataset/                    # Dataset citra daging sapi
+├── output-img/                 # Visualisasi hasil training & evaluasi
+│
+└── dataset/                    # Dataset citra daging sapi (tidak disertakan)
     ├── Segar/                  # 138 citra daging segar
     ├── SetengahSegar/          # 130 citra daging setengah segar
     └── Busuk/                  # 132 citra daging busuk
 ```
 
-> **Catatan:** Folder `models/` akan otomatis terbuat setelah menjalankan notebook `surf_final.ipynb` hingga selesai.
+> **Catatan:** Folder `dataset/` tidak disertakan dalam repositori. Unduh dataset secara terpisah (lihat bagian [Dataset](#-dataset)) dan letakkan di direktori root proyek.
 
 ---
 
@@ -179,7 +183,7 @@ cd bsurf
 ### 2. Buat Virtual Environment
 
 ```bash
-# Membuat environment baru bernama "surf_env" dengan Python 3.8
+# Membuat environment baru bernama "surf_env" dengan Python 3.7
 conda create -n surf_env python=3.7 -y
 
 # Mengaktifkan environment
@@ -229,7 +233,7 @@ dataset/
 └── Busuk/         → 132 citra (.jpg) — metmyoglobin dominan, kecokelatan/kehitaman
 ```
 
-Letakkan folder `dataset/` di direktori yang sama dengan file notebook (`surf_final.ipynb`).
+Letakkan folder `dataset/` di direktori root proyek (sejajar dengan `app.py` dan `train-surf.ipynb`).
 
 ---
 
@@ -240,7 +244,7 @@ Letakkan folder `dataset/` di direktori yang sama dengan file notebook (`surf_fi
 Jalankan seluruh sel notebook secara berurutan:
 
 ```bash
-jupyter notebook surf_final.ipynb
+jupyter notebook train-surf.ipynb
 ```
 
 Notebook akan melakukan:
