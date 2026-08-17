@@ -4,3 +4,7 @@ dataset/SetengahSegar
 img/
 notebook/
 test_img/
+.env
+wandb/
+model-lain
+.vscode/
