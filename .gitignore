@@ -8,3 +8,4 @@ test_img/
 wandb/
 model-lain
 .vscode/
+.continue
