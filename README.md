@@ -134,8 +134,9 @@ Citra Input (JPG/PNG)
 ```
 bsurf/
 │
-├── app.py                      # Aplikasi web Streamlit (Interface)
-├── train-surf.ipynb            # Notebook pelatihan & evaluasi model
+├── app.py                      # Aplikasi web Streamlit (Interface untuk uji prediksi)
+├── base-experiment.ipynb       # Notebook pelatihan & evaluasi model
+├── experiment-v2.ipynb         # Notebook pelatihan & evaluasi model versi 2 (update data leakage)
 ├── README.md                   # Dokumentasi proyek ini
 ├── requirements.txt            # Dependensi Python
 │
@@ -233,7 +234,7 @@ dataset/
 └── Busuk/         → 132 citra (.jpg) — metmyoglobin dominan, kecokelatan/kehitaman
 ```
 
-Letakkan folder `dataset/` di direktori root proyek (sejajar dengan `app.py` dan `train-surf.ipynb`).
+Letakkan folder `dataset/` di direktori root proyek (sejajar dengan `app.py` dan `base-experiment.ipynb`).
 
 ---
 
@@ -244,7 +245,7 @@ Letakkan folder `dataset/` di direktori root proyek (sejajar dengan `app.py` dan
 Jalankan seluruh sel notebook secara berurutan:
 
 ```bash
-jupyter notebook train-surf.ipynb
+jupyter notebook base-experiment.ipynb
 ```
 
 Notebook akan melakukan:
