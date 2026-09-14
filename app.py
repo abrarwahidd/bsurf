@@ -198,8 +198,8 @@ class FeatureWeighter(BaseEstimator, TransformerMixin):
 @st.cache_resource
 def load_models():
     try:
-        model_fusi  = joblib.load('models/fusi_model.pkl')
-        model_kmeans = joblib.load('models/kmeans_vocab.pkl')
+        model_fusi  = joblib.load('models/fusi_model-FIX.pkl')
+        model_kmeans = joblib.load('models/kmeans_vocab-FIX.pkl')
         return model_fusi, model_kmeans
     except Exception as e:
         st.error(f"❌ Gagal memuat model: {e}")
