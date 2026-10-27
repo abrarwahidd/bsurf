@@ -9,3 +9,4 @@ seaborn
 streamlit
 joblib
 Pillow
+opencv-python
