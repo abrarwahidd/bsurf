@@ -254,7 +254,9 @@ def extract_hsv_features(image: np.ndarray, mask: Optional[np.ndarray] = None) -
 
 
 def extract_surf_descriptors(image: np.ndarray):
-    surf = cv2.xfeatures2d.SURF_create(300)
+    # surf = cv2.xfeatures2d.SURF_create(300)
+    # Ubah menjadi seperti ini di versi modern
+    surf = cv2.SURF_create(hessianThreshold=400)
     kp, desc = surf.detectAndCompute(image, None)
     return kp, desc
 
