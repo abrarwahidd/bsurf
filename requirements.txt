@@ -1,5 +1,4 @@
-# opencv-contrib-python==3.4.2.16
-opencv-contrib-python>=4.5.0
+opencv-contrib-python==3.4.2.16
 scikit-learn
 numpy
 scipy
@@ -9,4 +8,3 @@ seaborn
 streamlit
 joblib
 Pillow
-opencv-python
